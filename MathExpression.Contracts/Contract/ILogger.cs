@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace MathExpression.Contracts
+namespace MathExpression.Contracts.Contract
 { 
     /// <summary>
     /// Логгер

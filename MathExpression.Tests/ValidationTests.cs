@@ -6,7 +6,6 @@ using Xunit;
 using Moq;
 using MathExpression.Contracts.Contract;
 using MathExpression.Contracts.Model.Exceptions;
-using MathExpression.Contracts;
 
 namespace MathExpression.Tests
 {

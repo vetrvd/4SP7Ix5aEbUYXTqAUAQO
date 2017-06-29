@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using MathExpression.Contracts.Contract;
 
-namespace MathExpression.Contracts.Service
+namespace MathExpression.Contracts.Service.Operation
 {
     public sealed class SumOperator : IOperation
     {

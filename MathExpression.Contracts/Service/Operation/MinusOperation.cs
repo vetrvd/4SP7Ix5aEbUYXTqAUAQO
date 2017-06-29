@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using MathExpression.Contracts.Contract;
 
-namespace MathExpression.Contracts.Service
+namespace MathExpression.Contracts.Service.Operation
 {
     public sealed class MinusOperation : IOperation
     {
@@ -14,7 +13,7 @@ namespace MathExpression.Contracts.Service
 
         char IOperation.Separator => '-';
 
-        float IOperation.Priority => 0;
+        float IOperation.Priority => 1;
 
         double IOperation.Calculate(double args1, double args2)
         {

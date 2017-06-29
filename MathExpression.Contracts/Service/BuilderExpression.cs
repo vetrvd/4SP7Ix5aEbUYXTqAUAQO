@@ -28,17 +28,14 @@ namespace MathExpression.Contracts.Service
 
         private Expression _CreateExpression(string input, IEnumerable<IOperation> operations)
         {
-            var op = operations.FirstOrDefault(it => input.IndexOf(it.Separator) != -1);
+            var op = operations.FirstOrDefault(it => input.Contains(it.Separator));
             if (op == null)
             {
                 return new Expression(double.Parse(input));
             }
 
-            var index = input.IndexOf(op.Separator);
-
             return new Expression(op,
-                _CreateExpression(input.Substring(0, index).Trim(), operations), 
-                _CreateExpression(input.Substring(index + 1, input.Length - index - 1).Trim(), operations));
+                input.Split(op.Separator).Select(at => _CreateExpression(at.Trim(), operations)));
         }
     }
 }

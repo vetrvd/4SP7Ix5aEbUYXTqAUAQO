@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Xunit;
 using Moq;
@@ -11,7 +12,7 @@ namespace MathExpression.Tests
 {
     public class BuilderExpressionTest
     {
-        private IBuilderExpression builder = null;
+        private readonly IBuilderExpression builder = null;
 
         public BuilderExpressionTest()
         {
@@ -30,8 +31,7 @@ namespace MathExpression.Tests
         public void CreateExpression_EmptyWork_Create()
         {
             var result = builder.CreateExpression("1");
-            Assert.Null(result.Left);
-            Assert.Null(result.Right);
+            Assert.Null(result.Links);
             Assert.Null(result.Operation);
             Assert.Equal(1.0, result.Value);
         }
@@ -40,8 +40,8 @@ namespace MathExpression.Tests
         public void CreateExpression_EmptyWork_Create2()
         {
             var result = builder.CreateExpression("1 + 1");
-            Assert.NotNull(result.Left);
-            Assert.NotNull(result.Right);
+            Assert.NotNull(result.Links);
+            Assert.Equal(2, result.Links.Count());
             Assert.NotNull(result.Operation);
         }
 
@@ -49,8 +49,8 @@ namespace MathExpression.Tests
         public void CreateExpression_EmptyWork_Create3()
         {
             var result = builder.CreateExpression("1 + 1 + 1 + 1.2 + 1 + 1");
-            Assert.NotNull(result.Left);
-            Assert.NotNull(result.Right);
+            Assert.NotNull(result.Links);
+            Assert.Equal(6, result.Links.Count());
             Assert.NotNull(result.Operation);
         }
     }

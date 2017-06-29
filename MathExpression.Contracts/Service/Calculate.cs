@@ -1,7 +1,9 @@
 ﻿using MathExpression.Contracts.Contract;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading;
 using MathExpression.Contracts.Model;
 
 namespace MathExpression.Contracts.Service
@@ -27,9 +29,14 @@ namespace MathExpression.Contracts.Service
             }
             else
             {
-                return expression.Operation.Calculate(
-                    _Calculate(expression.Left),
-                    _Calculate(expression.Right));
+                var items = expression.Links.Select(it => _Calculate(it)).ToList();
+                var result = items.First();
+                foreach (var it  in items.GetRange(1, items.Count - 1))
+                {
+                    result = expression.Operation.Calculate(result, it);
+                }
+
+                return result;
             }
         }
     }

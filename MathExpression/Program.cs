@@ -3,6 +3,7 @@ using MathExpression.Contracts.Contract;
 using MathExpression.Contracts.Service;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using MathExpression.Contracts.Service.Operation;
 
 namespace MathExpression
 {

@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using MathExpression.Contracts.Contract;
 
 namespace MathExpression.Contracts.Model
 {
     public class Expression
     {
         public IOperation Operation { get; }
-        public Expression Left { get; }
-        public Expression Right { get; }
-
+        public IEnumerable<Expression> Links { get; }
         public double Value { get; }
 
         public Expression(double value)
@@ -19,11 +18,9 @@ namespace MathExpression.Contracts.Model
 
         public Expression(
             IOperation operation, 
-            Expression left,
-            Expression right)
+            IEnumerable<Expression> links )
         {
-            this.Left = left;
-            this.Right = right;
+            this.Links = links;
             this.Operation = operation;
         }
     }

@@ -2,9 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using MathExpression.Contracts.Model;
-using MathExpression.Contracts.Model.Exceptions;
 using System.Linq;
+using MathExpression.Contracts.Model.Exceptions;
 
 namespace MathExpression.Contracts.Service
 {

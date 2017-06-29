@@ -1,10 +1,12 @@
-﻿using MathExpression.Contracts.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace MathExpression.Contracts.Contract
 {
+    /// <summary>
+    /// Провайдер доступных операций
+    /// </summary>
     public interface IOperationProvider
     {
         void RegisterOperation(IOperation operation);
