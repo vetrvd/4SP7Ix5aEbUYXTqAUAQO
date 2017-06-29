@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathExpression", "MathExpression\MathExpression.csproj", "{C32C1BEC-1599-484E-A4E2-5EA127C43B1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathExpression.Contracts", "MathExpression.Contracts\MathExpression.Contracts.csproj", "{C36C9557-DA41-4FF9-94DD-987DC43D49F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9DAB65CD-94FF-40E1-A18D-6BB039BDAC56}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathExpression.Tests", "MathExpression.Tests\MathExpression.Tests.csproj", "{C3B9CFB2-B713-446F-B235-BA71843071BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C32C1BEC-1599-484E-A4E2-5EA127C43B1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C32C1BEC-1599-484E-A4E2-5EA127C43B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C32C1BEC-1599-484E-A4E2-5EA127C43B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C32C1BEC-1599-484E-A4E2-5EA127C43B1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C36C9557-DA41-4FF9-94DD-987DC43D49F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C36C9557-DA41-4FF9-94DD-987DC43D49F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C36C9557-DA41-4FF9-94DD-987DC43D49F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C36C9557-DA41-4FF9-94DD-987DC43D49F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3B9CFB2-B713-446F-B235-BA71843071BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3B9CFB2-B713-446F-B235-BA71843071BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3B9CFB2-B713-446F-B235-BA71843071BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3B9CFB2-B713-446F-B235-BA71843071BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
