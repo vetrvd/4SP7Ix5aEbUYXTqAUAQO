@@ -10,6 +10,6 @@ namespace MathExpression.Contracts.Contract
     /// </summary>
     public interface IBuilderExpression
     {
-        Expression CreateExpression(string input);
+        IExpression CreateExpression(string input);
     }
 }

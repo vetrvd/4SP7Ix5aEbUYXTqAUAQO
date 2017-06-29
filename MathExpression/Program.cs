@@ -13,7 +13,6 @@ namespace MathExpression
         {
             ServiceCollection serviceCollection = new ServiceCollection();
             serviceCollection.AddSingleton(typeof(ILogger<>), typeof(Logger<>));
-            serviceCollection.AddSingleton<ICalculate, Calculate>();
             serviceCollection.AddSingleton<IValidator, Validator>();
             serviceCollection.AddTransient<IOperation, SumOperator>();
             serviceCollection.AddTransient<IOperation, MinusOperation>();

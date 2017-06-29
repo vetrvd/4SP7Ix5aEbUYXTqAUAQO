@@ -36,7 +36,6 @@ namespace MathExpression.Tests
                 new Validator(
                     new Logger<Validator>(),
                     operationProvider),
-                new Calculate(new Logger<Calculate>()),
                 new BuilderExpression(new Logger<BuilderExpression>(), operationProvider));
         }
 

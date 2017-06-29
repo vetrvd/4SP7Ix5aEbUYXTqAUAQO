@@ -20,21 +20,21 @@ namespace MathExpression.Contracts.Service
             _operationProvider = operationProvider ?? throw new ArgumentNullException(nameof(operationProvider));
         }
 
-        Expression IBuilderExpression.CreateExpression(string input)
+        IExpression IBuilderExpression.CreateExpression(string input)
         {
             var operations = _operationProvider.GetSortOperation().ToArray();
             return _CreateExpression(input, operations);
         }
 
-        private Expression _CreateExpression(string input, IEnumerable<IOperation> operations)
+        private IExpression _CreateExpression(string input, IEnumerable<IOperation> operations)
         {
             var op = operations.FirstOrDefault(it => input.Contains(it.Separator));
             if (op == null)
             {
-                return new Expression(double.Parse(input));
+                return new ValueExpression(double.Parse(input));
             }
 
-            return new Expression(op,
+            return new OperationExpression(op,
                 input.Split(op.Separator).Select(at => _CreateExpression(at.Trim(), operations)));
         }
     }
